@@ -20,7 +20,13 @@
 		0AF5214C1D408EE0009611B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AF5214B1D408EE0009611B1 /* Assets.xcassets */; };
 		7045BF8A1D3A4157003614E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045BF891D3A4157003614E3 /* AppDelegate.swift */; };
 		7045BF941D3A4157003614E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7045BF921D3A4157003614E3 /* LaunchScreen.storyboard */; };
-		ADCCB1CB4606EABE5DBB3AFE /* Pods_AppyStoreApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789F91469482654E3E6B56E3 /* Pods_AppyStoreApplication.framework */; };
+		70EEEF7D1D40C97600E18CB0 /* SubCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EEEF7C1D40C97600E18CB0 /* SubCategoryController.swift */; };
+		70EEEF7F1D40C97D00E18CB0 /* SubCategoryControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EEEF7E1D40C97D00E18CB0 /* SubCategoryControllerProtocol.swift */; };
+		70EEEF811D40C98800E18CB0 /* SubCategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EEEF801D40C98800E18CB0 /* SubCategoryViewCell.swift */; };
+		70EEEF831D40C99400E18CB0 /* SubCategoryViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EEEF821D40C99400E18CB0 /* SubCategoryViewContoller.swift */; };
+		70EEEF851D40C99B00E18CB0 /* SubCategoryViewContollerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EEEF841D40C99B00E18CB0 /* SubCategoryViewContollerProtocol.swift */; };
+		70EEEF871D40C9A700E18CB0 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EEEF861D40C9A700E18CB0 /* RestService.swift */; };
+		7C9DDD55534154B4ACF47B18 /* Pods_AppyStoreApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789F91469482654E3E6B56E3 /* Pods_AppyStoreApplication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +45,13 @@
 		7045BF891D3A4157003614E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7045BF931D3A4157003614E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7045BF951D3A4157003614E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70EEEF7C1D40C97600E18CB0 /* SubCategoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoryController.swift; sourceTree = "<group>"; };
+		70EEEF7E1D40C97D00E18CB0 /* SubCategoryControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoryControllerProtocol.swift; sourceTree = "<group>"; };
+		70EEEF801D40C98800E18CB0 /* SubCategoryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoryViewCell.swift; sourceTree = "<group>"; };
+		70EEEF821D40C99400E18CB0 /* SubCategoryViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoryViewContoller.swift; sourceTree = "<group>"; };
+		70EEEF841D40C99B00E18CB0 /* SubCategoryViewContollerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoryViewContollerProtocol.swift; sourceTree = "<group>"; };
+		70EEEF861D40C9A700E18CB0 /* RestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestService.swift; sourceTree = "<group>"; };
+		70EEEF8A1D40D2EB00E18CB0 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = "Pods/../build/Debug-iphoneos/AlamofireImage/AlamofireImage.framework"; sourceTree = "<group>"; };
 		789F91469482654E3E6B56E3 /* Pods_AppyStoreApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppyStoreApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34B8F02E20AE1495BB77EA8 /* Pods-AppyStoreApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppyStoreApplication.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppyStoreApplication/Pods-AppyStoreApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		CD5BE78F35BE731B393BE637 /* Pods-AppyStoreApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppyStoreApplication.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppyStoreApplication/Pods-AppyStoreApplication.release.xcconfig"; sourceTree = "<group>"; };
@@ -50,7 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AF521351D408AF4009611B1 /* Alamofire.framework in Frameworks */,
-				ADCCB1CB4606EABE5DBB3AFE /* Pods_AppyStoreApplication.framework in Frameworks */,
+				7C9DDD55534154B4ACF47B18 /* Pods_AppyStoreApplication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +102,7 @@
 		6EA365EF8A3BA2194DF7F161 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				70EEEF8A1D40D2EB00E18CB0 /* AlamofireImage.framework */,
 				0AF521341D408AF4009611B1 /* Alamofire.framework */,
 				789F91469482654E3E6B56E3 /* Pods_AppyStoreApplication.framework */,
 			);
@@ -98,6 +112,7 @@
 		7045BF7D1D3A4156003614E3 = {
 			isa = PBXGroup;
 			children = (
+				70EEEF781D40C85300E18CB0 /* SubCategory */,
 				0AF521381D408B81009611B1 /* Category Views */,
 				0AF521371D408B75009611B1 /* Controller */,
 				0AF521361D408B63009611B1 /* Model */,
@@ -126,6 +141,43 @@
 				7045BF951D3A4157003614E3 /* Info.plist */,
 			);
 			path = AppyStoreApplication;
+			sourceTree = "<group>";
+		};
+		70EEEF781D40C85300E18CB0 /* SubCategory */ = {
+			isa = PBXGroup;
+			children = (
+				70EEEF791D40C92B00E18CB0 /* SubCatageryView */,
+				70EEEF7A1D40C93B00E18CB0 /* SubCategoryController */,
+				70EEEF7B1D40C95500E18CB0 /* SubCategoryModel */,
+			);
+			name = SubCategory;
+			sourceTree = "<group>";
+		};
+		70EEEF791D40C92B00E18CB0 /* SubCatageryView */ = {
+			isa = PBXGroup;
+			children = (
+				70EEEF821D40C99400E18CB0 /* SubCategoryViewContoller.swift */,
+				70EEEF841D40C99B00E18CB0 /* SubCategoryViewContollerProtocol.swift */,
+				70EEEF801D40C98800E18CB0 /* SubCategoryViewCell.swift */,
+			);
+			name = SubCatageryView;
+			sourceTree = "<group>";
+		};
+		70EEEF7A1D40C93B00E18CB0 /* SubCategoryController */ = {
+			isa = PBXGroup;
+			children = (
+				70EEEF7C1D40C97600E18CB0 /* SubCategoryController.swift */,
+				70EEEF7E1D40C97D00E18CB0 /* SubCategoryControllerProtocol.swift */,
+			);
+			name = SubCategoryController;
+			sourceTree = "<group>";
+		};
+		70EEEF7B1D40C95500E18CB0 /* SubCategoryModel */ = {
+			isa = PBXGroup;
+			children = (
+				70EEEF861D40C9A700E18CB0 /* RestService.swift */,
+			);
+			name = SubCategoryModel;
 			sourceTree = "<group>";
 		};
 		EEB96E31DE06C2D7CC88551D /* Pods */ = {
@@ -260,15 +312,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70EEEF851D40C99B00E18CB0 /* SubCategoryViewContollerProtocol.swift in Sources */,
 				0AF521421D408C5F009611B1 /* LoginViewController.swift in Sources */,
 				0AF5213E1D408C5F009611B1 /* CategoryViewController.swift in Sources */,
 				7045BF8A1D3A4157003614E3 /* AppDelegate.swift in Sources */,
+				70EEEF811D40C98800E18CB0 /* SubCategoryViewCell.swift in Sources */,
 				0AF521411D408C5F009611B1 /* DetailViewController.swift in Sources */,
 				0AF521401D408C5F009611B1 /* ViewProtocol.swift in Sources */,
 				0AF521481D408D73009611B1 /* AalmofireRequest.swift in Sources */,
 				0AF5213F1D408C5F009611B1 /* CategoryViewControllerCell.swift in Sources */,
 				0AF521451D408D61009611B1 /* Controllerprotocol.swift in Sources */,
+				70EEEF7D1D40C97600E18CB0 /* SubCategoryController.swift in Sources */,
 				0AF521461D408D61009611B1 /* controller.swift in Sources */,
+				70EEEF831D40C99400E18CB0 /* SubCategoryViewContoller.swift in Sources */,
+				70EEEF7F1D40C97D00E18CB0 /* SubCategoryControllerProtocol.swift in Sources */,
+				70EEEF871D40C9A700E18CB0 /* RestService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +430,10 @@
 			baseConfigurationReference = C34B8F02E20AE1495BB77EA8 /* Pods-AppyStoreApplication.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/AlamofireImage",
+				);
 				INFOPLIST_FILE = AppyStoreApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bridgelabz.AppyStoreApplication;
@@ -384,6 +446,10 @@
 			baseConfigurationReference = CD5BE78F35BE731B393BE637 /* Pods-AppyStoreApplication.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/AlamofireImage",
+				);
 				INFOPLIST_FILE = AppyStoreApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bridgelabz.AppyStoreApplication;

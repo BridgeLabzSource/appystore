@@ -65,13 +65,11 @@ idstring = callcontroller.datalist[indexPath.row]["parent_category_id"] as! Stri
   
     
    // print(idstring)
-
+//
     Alamofire.request(.GET, callcontroller.datalist[indexPath.row]["image_path"]!!["50x50"] as! String).response() {
         (_, _, data, _) in
         let image = UIImage(data: data! as! NSData)
         cell.mycollectionimage.image = image
-      
-      
     }
 
 
