@@ -137,3 +137,5 @@ iOSInjectionProject/
 tmp
 Main.storyboard
 Podfile.lock
+Pods
+Podfile
