@@ -24,18 +24,20 @@ class CategoryViewController: UIViewController ,UICollectionViewDelegate,UIColle
     @IBOutlet weak var third: UIButton!
     
     @IBOutlet weak var fourth: UIButton!
+    
     @IBOutlet weak var fifth: UIButton!
+    
     var idstring :String?
     var callcontroller : controller!
-    override func viewDidLoad() {
+    var selectedIndex = 0
+    
+     override func viewDidLoad() {
         super.viewDidLoad()
        
        changesimages()
     
         callcontroller = controller(viewprotocolobject: self)
-        
-      
-        
+
         
        collection.backgroundView = UIImageView(image: UIImage(named: "backgroundimage"))
         
@@ -80,33 +82,33 @@ idstring = callcontroller.datalist[indexPath.row]["parent_category_id"] as! Stri
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "userSelectSegue") {
             
-            let nextVC = segue.destinationViewController as! DetailViewController;
+ //           let nextVC = segue.destinationViewController as! SubCategoryViewContoller;
            
-            
-            let defaults = NSUserDefaults.standardUserDefaults()
-            defaults.setObject(idstring!, forKey: "category_id1")
+//
+//            let defaults = NSUserDefaults.standardUserDefaults()
+//            defaults.setObject(idstring!, forKey: "category_id1")
            
         
         }
-    }
-    
-    
-    
-    
-    
-    //tableviewdidselectmethod
-    
-   /* func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+        let SubCategoryViewObj = segue.destinationViewController as! SubCategoryViewContoller
+        SubCategoryViewObj.mSelectedCategory = callcontroller.datalist[selectedIndex]
         
+        
+    }
+   
+    //tableviewdidselectmethod
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
     {
         
-        let TableViewController1 = self.storyboard!.instantiateViewControllerWithIdentifier("DetailViewController1") as! DetailViewController
-        self.navigationController?.pushViewController(TableViewController1, animated: true)
-        
-        TableViewController1.categoryid = callcontroller.datalist[indexPath.row]["category_id"] as! Int
+//        let TableViewController1 = self.storyboard!.instantiateViewControllerWithIdentifier("DetailViewController1") as! DetailViewController
+//        self.navigationController?.pushViewController(TableViewController1, animated: true)
+//        
+//        TableViewController1.categoryid = callcontroller.datalist[indexPath.row]["category_id"] as! Int
+        selectedIndex = indexPath.row
+        performSegueWithIdentifier("SubCategoryView", sender: nil)
     
     
-    }*/
+    }
     
     func updateview ()
     {

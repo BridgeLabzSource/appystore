@@ -35,12 +35,14 @@ class SubCategoryViewContoller: UIViewController,UICollectionViewDataSource,UICo
     var mPlayerViewController : AVPlayerViewController!
     var index : Int!
     var historyChecker = false
+    var mSelectedCategory : AnyObject?
+    var mSelectedCategoryCount = 0
     
     override func viewDidLoad() {
         mChangeButtonImage()
         mVideoButtonLabel.setImage(UIImage(named: "videobackground.png"), forState: UIControlState.Normal)
         super.viewDidLoad()
-        mSubCategoryControllerObj = SubCategoryController(SCviewProtocolObj: self)
+        mSubCategoryControllerObj = SubCategoryController(SCviewProtocolObj: self , category: mSelectedCategory)
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundimage.jpg")!)
         collectionView.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundimage.jpg")!)
     }
@@ -64,7 +66,7 @@ class SubCategoryViewContoller: UIViewController,UICollectionViewDataSource,UICo
         cell.videoNameLabel.text = mSubCategoryControllerObj.mSubCatagoryList[indexPath.row]["title"] as? String
         cell.videoImageVIew.image = UIImage(named: "loading_img.png")
         //Fetch video image
-        Alamofire.request(.GET, "http://s.mobimgs.com/m/%217YzqfmB2xlvxWZhs6NK4lFeCGhSWlvOKKp6J3Ktk9Yh2NJ0vd2ESs_p30uGsusQRIcZJnRxovUmmpI6z2GY0bU1_PWe1STQC3Dq_xHKlXA%3D/20110731.mov.jpg")
+        Alamofire.request(.GET, "http://s.mobimgs.com/m/%217YzqfmB2xlvxWZhs6NK4u0UCduaKvts8yS%21vhlN%21Z447cg8Hv8Al8zwoy2LyPCntDbdyPS97VQFsvZ5f5Y5MbilpEYs79CfQYxRqk%21xMmE%3D/20077841.mp4.jpg")
             .responseImage { response in
                 cell.videoImageVIew.stopAnimating()
                 if (response.result.value != nil) {
@@ -111,6 +113,7 @@ class SubCategoryViewContoller: UIViewController,UICollectionViewDataSource,UICo
 
         mChangeButtonImage()
         mBackButtonLabel.setImage(UIImage(named: "backY.png"), forState: UIControlState.Normal)
+        performSegueWithIdentifier("CategoryView", sender: nil)
         
     }
     
@@ -129,6 +132,8 @@ class SubCategoryViewContoller: UIViewController,UICollectionViewDataSource,UICo
     @IBAction func mSearchButton(sender: UIButton) {
         mChangeButtonImage()
         mSearchButtonLabel.setImage(UIImage(named: "searchbackground.png"), forState: UIControlState.Normal)
+        
+        let searchBar = UISearchBar()
         
     }
     

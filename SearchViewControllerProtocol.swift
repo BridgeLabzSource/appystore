@@ -6,8 +6,7 @@
 //  Copyright © 2016 bridgelabz. All rights reserved.
 //
 
-import UIKit
 
-class SearchViewControllerProtocol: NSObject {
-
+protocol SearchViewControllerProtocol {
+    func updataSearchViewController(list : AnyObject)
 }

@@ -15,11 +15,15 @@
 		0AF521421D408C5F009611B1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF5213D1D408C5F009611B1 /* LoginViewController.swift */; };
 		0AF521451D408D61009611B1 /* Controllerprotocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF521431D408D61009611B1 /* Controllerprotocol.swift */; };
 		0AF521461D408D61009611B1 /* controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF521441D408D61009611B1 /* controller.swift */; };
-		0AF521481D408D73009611B1 /* AalmofireRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF521471D408D73009611B1 /* AalmofireRequest.swift */; };
 		0AF5214A1D408E26009611B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF521491D408E26009611B1 /* Main.storyboard */; };
 		0AF5214C1D408EE0009611B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AF5214B1D408EE0009611B1 /* Assets.xcassets */; };
+		7001F00A1D433E7E00CC197C /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7001F0091D433E7E00CC197C /* SearchController.swift */; };
+		7001F00C1D433FBD00CC197C /* SearchViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7001F00B1D433FBD00CC197C /* SearchViewControllerProtocol.swift */; };
+		7001F00E1D43402100CC197C /* SearchControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7001F00D1D43402100CC197C /* SearchControllerProtocol.swift */; };
+		702A4A8C1D4249A000CCEE94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702A4A8B1D4249A000CCEE94 /* ViewController.swift */; };
 		7045BF8A1D3A4157003614E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045BF891D3A4157003614E3 /* AppDelegate.swift */; };
 		7045BF941D3A4157003614E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7045BF921D3A4157003614E3 /* LaunchScreen.storyboard */; };
+		706EA32D1D421A2C007B2E3B /* SearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706EA32C1D421A2C007B2E3B /* SearchBarViewController.swift */; };
 		70EEEF7D1D40C97600E18CB0 /* SubCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EEEF7C1D40C97600E18CB0 /* SubCategoryController.swift */; };
 		70EEEF7F1D40C97D00E18CB0 /* SubCategoryControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EEEF7E1D40C97D00E18CB0 /* SubCategoryControllerProtocol.swift */; };
 		70EEEF811D40C98800E18CB0 /* SubCategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EEEF801D40C98800E18CB0 /* SubCategoryViewCell.swift */; };
@@ -38,13 +42,17 @@
 		0AF5213D1D408C5F009611B1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = AppyStoreApplication/LoginViewController.swift; sourceTree = "<group>"; };
 		0AF521431D408D61009611B1 /* Controllerprotocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controllerprotocol.swift; sourceTree = "<group>"; };
 		0AF521441D408D61009611B1 /* controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = controller.swift; sourceTree = "<group>"; };
-		0AF521471D408D73009611B1 /* AalmofireRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AalmofireRequest.swift; sourceTree = "<group>"; };
 		0AF521491D408E26009611B1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0AF5214B1D408EE0009611B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7001F0091D433E7E00CC197C /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		7001F00B1D433FBD00CC197C /* SearchViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewControllerProtocol.swift; sourceTree = "<group>"; };
+		7001F00D1D43402100CC197C /* SearchControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchControllerProtocol.swift; sourceTree = "<group>"; };
+		702A4A8B1D4249A000CCEE94 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7045BF861D3A4157003614E3 /* AppyStoreApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppyStoreApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7045BF891D3A4157003614E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7045BF931D3A4157003614E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7045BF951D3A4157003614E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		706EA32C1D421A2C007B2E3B /* SearchBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarViewController.swift; sourceTree = "<group>"; };
 		70EEEF7C1D40C97600E18CB0 /* SubCategoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoryController.swift; sourceTree = "<group>"; };
 		70EEEF7E1D40C97D00E18CB0 /* SubCategoryControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoryControllerProtocol.swift; sourceTree = "<group>"; };
 		70EEEF801D40C98800E18CB0 /* SubCategoryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoryViewCell.swift; sourceTree = "<group>"; };
@@ -73,28 +81,25 @@
 		0AF521361D408B63009611B1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0AF521471D408D73009611B1 /* AalmofireRequest.swift */,
+				70EEEF861D40C9A700E18CB0 /* RestService.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
 		};
-		0AF521371D408B75009611B1 /* Controller */ = {
+		0AF521371D408B75009611B1 /* CategoryController */ = {
 			isa = PBXGroup;
 			children = (
-				0AF521431D408D61009611B1 /* Controllerprotocol.swift */,
 				0AF521441D408D61009611B1 /* controller.swift */,
+				0AF521431D408D61009611B1 /* Controllerprotocol.swift */,
 			);
-			name = Controller;
+			name = CategoryController;
 			sourceTree = "<group>";
 		};
 		0AF521381D408B81009611B1 /* Category Views */ = {
 			isa = PBXGroup;
 			children = (
-				0AF521391D408C5F009611B1 /* CategoryViewController.swift */,
-				0AF5213A1D408C5F009611B1 /* CategoryViewControllerCell.swift */,
-				0AF5213B1D408C5F009611B1 /* ViewProtocol.swift */,
-				0AF5213C1D408C5F009611B1 /* DetailViewController.swift */,
-				0AF5213D1D408C5F009611B1 /* LoginViewController.swift */,
+				706EA3271D41FE2F007B2E3B /* View */,
+				0AF521371D408B75009611B1 /* CategoryController */,
 			);
 			name = "Category Views";
 			sourceTree = "<group>";
@@ -109,12 +114,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7001F0041D433E1400CC197C /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				7001F0051D433E2500CC197C /* SearchView */,
+				7001F0061D433E3700CC197C /* SearchController */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		7001F0051D433E2500CC197C /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				706EA32C1D421A2C007B2E3B /* SearchBarViewController.swift */,
+				7001F00B1D433FBD00CC197C /* SearchViewControllerProtocol.swift */,
+			);
+			name = SearchView;
+			sourceTree = "<group>";
+		};
+		7001F0061D433E3700CC197C /* SearchController */ = {
+			isa = PBXGroup;
+			children = (
+				7001F0091D433E7E00CC197C /* SearchController.swift */,
+				7001F00D1D43402100CC197C /* SearchControllerProtocol.swift */,
+			);
+			name = SearchController;
+			sourceTree = "<group>";
+		};
 		7045BF7D1D3A4156003614E3 = {
 			isa = PBXGroup;
 			children = (
+				7001F0041D433E1400CC197C /* Search */,
 				70EEEF781D40C85300E18CB0 /* SubCategory */,
 				0AF521381D408B81009611B1 /* Category Views */,
-				0AF521371D408B75009611B1 /* Controller */,
 				0AF521361D408B63009611B1 /* Model */,
 				7045BF881D3A4157003614E3 /* AppyStoreApplication */,
 				7045BF871D3A4157003614E3 /* Products */,
@@ -136,6 +168,7 @@
 			children = (
 				7045BF891D3A4157003614E3 /* AppDelegate.swift */,
 				0AF521491D408E26009611B1 /* Main.storyboard */,
+				702A4A8B1D4249A000CCEE94 /* ViewController.swift */,
 				0AF5214B1D408EE0009611B1 /* Assets.xcassets */,
 				7045BF921D3A4157003614E3 /* LaunchScreen.storyboard */,
 				7045BF951D3A4157003614E3 /* Info.plist */,
@@ -143,12 +176,23 @@
 			path = AppyStoreApplication;
 			sourceTree = "<group>";
 		};
+		706EA3271D41FE2F007B2E3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0AF521391D408C5F009611B1 /* CategoryViewController.swift */,
+				0AF5213A1D408C5F009611B1 /* CategoryViewControllerCell.swift */,
+				0AF5213B1D408C5F009611B1 /* ViewProtocol.swift */,
+				0AF5213C1D408C5F009611B1 /* DetailViewController.swift */,
+				0AF5213D1D408C5F009611B1 /* LoginViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		70EEEF781D40C85300E18CB0 /* SubCategory */ = {
 			isa = PBXGroup;
 			children = (
 				70EEEF791D40C92B00E18CB0 /* SubCatageryView */,
 				70EEEF7A1D40C93B00E18CB0 /* SubCategoryController */,
-				70EEEF7B1D40C95500E18CB0 /* SubCategoryModel */,
 			);
 			name = SubCategory;
 			sourceTree = "<group>";
@@ -170,14 +214,6 @@
 				70EEEF7E1D40C97D00E18CB0 /* SubCategoryControllerProtocol.swift */,
 			);
 			name = SubCategoryController;
-			sourceTree = "<group>";
-		};
-		70EEEF7B1D40C95500E18CB0 /* SubCategoryModel */ = {
-			isa = PBXGroup;
-			children = (
-				70EEEF861D40C9A700E18CB0 /* RestService.swift */,
-			);
-			name = SubCategoryModel;
 			sourceTree = "<group>";
 		};
 		EEB96E31DE06C2D7CC88551D /* Pods */ = {
@@ -314,17 +350,21 @@
 			files = (
 				70EEEF851D40C99B00E18CB0 /* SubCategoryViewContollerProtocol.swift in Sources */,
 				0AF521421D408C5F009611B1 /* LoginViewController.swift in Sources */,
+				706EA32D1D421A2C007B2E3B /* SearchBarViewController.swift in Sources */,
 				0AF5213E1D408C5F009611B1 /* CategoryViewController.swift in Sources */,
 				7045BF8A1D3A4157003614E3 /* AppDelegate.swift in Sources */,
 				70EEEF811D40C98800E18CB0 /* SubCategoryViewCell.swift in Sources */,
 				0AF521411D408C5F009611B1 /* DetailViewController.swift in Sources */,
+				7001F00A1D433E7E00CC197C /* SearchController.swift in Sources */,
 				0AF521401D408C5F009611B1 /* ViewProtocol.swift in Sources */,
-				0AF521481D408D73009611B1 /* AalmofireRequest.swift in Sources */,
+				702A4A8C1D4249A000CCEE94 /* ViewController.swift in Sources */,
 				0AF5213F1D408C5F009611B1 /* CategoryViewControllerCell.swift in Sources */,
 				0AF521451D408D61009611B1 /* Controllerprotocol.swift in Sources */,
 				70EEEF7D1D40C97600E18CB0 /* SubCategoryController.swift in Sources */,
 				0AF521461D408D61009611B1 /* controller.swift in Sources */,
+				7001F00C1D433FBD00CC197C /* SearchViewControllerProtocol.swift in Sources */,
 				70EEEF831D40C99400E18CB0 /* SubCategoryViewContoller.swift in Sources */,
+				7001F00E1D43402100CC197C /* SearchControllerProtocol.swift in Sources */,
 				70EEEF7F1D40C97D00E18CB0 /* SubCategoryControllerProtocol.swift in Sources */,
 				70EEEF871D40C9A700E18CB0 /* RestService.swift in Sources */,
 			);

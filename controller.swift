@@ -12,13 +12,17 @@ class controller: Controllerprotocol {
 
     
     var datalist = NSMutableArray()
-    var alamofireobject : AalmofireRequest!
     var variableprotocol : ViewProtocol!
+    var mRestServiceObj : RestService! 
     
     init(viewprotocolobject : ViewProtocol) {
         variableprotocol = viewprotocolobject
-        alamofireobject = AalmofireRequest()
-        alamofireobject.almofirerequest(self)
+        
+        mRestServiceObj = RestService()
+        mRestServiceObj.mGetCategoryList(self)
+        
+//        alamofireobject = AalmofireRequest()
+//        alamofireobject.almofirerequest(self)
         
         
     }

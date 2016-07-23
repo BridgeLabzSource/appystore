@@ -8,6 +8,16 @@
 
 import UIKit
 
-class SearchController: NSObject {
+class SearchController: SearchControllerProtocol {
+    
+    var mSearchCategoryList = NSMutableArray()
+    var mSearchCategoryListCount = 0
+    
+    init() {
+        
+    }
 
+    func updataSearchController (list : AnyObject) {
+        mSearchCategoryList = list as! NSMutableArray
+    }
 }
