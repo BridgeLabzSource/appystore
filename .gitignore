@@ -136,3 +136,4 @@ iOSInjectionProject/
 .DS_Store
 tmp
 Main.storyboard
+Podfile
