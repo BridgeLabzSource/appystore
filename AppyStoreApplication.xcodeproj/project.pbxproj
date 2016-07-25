@@ -20,10 +20,19 @@
 		7001F00A1D433E7E00CC197C /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7001F0091D433E7E00CC197C /* SearchController.swift */; };
 		7001F00C1D433FBD00CC197C /* SearchViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7001F00B1D433FBD00CC197C /* SearchViewControllerProtocol.swift */; };
 		7001F00E1D43402100CC197C /* SearchControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7001F00D1D43402100CC197C /* SearchControllerProtocol.swift */; };
+		7001F0131D43982E00CC197C /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7001F0121D43982E00CC197C /* HistoryViewController.swift */; };
+		7001F0151D43984000CC197C /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7001F0141D43984000CC197C /* HistoryController.swift */; };
+		7001F0171D43985800CC197C /* HistoryControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7001F0161D43985800CC197C /* HistoryControllerProtocol.swift */; };
+		7001F0191D43986C00CC197C /* HistoryViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7001F0181D43986C00CC197C /* HistoryViewControllerProtocol.swift */; };
+		7001F01B1D4398FE00CC197C /* HistoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7001F01A1D4398FE00CC197C /* HistoryCollectionViewCell.swift */; };
 		702A4A8C1D4249A000CCEE94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702A4A8B1D4249A000CCEE94 /* ViewController.swift */; };
 		7045BF8A1D3A4157003614E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045BF891D3A4157003614E3 /* AppDelegate.swift */; };
 		7045BF941D3A4157003614E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7045BF921D3A4157003614E3 /* LaunchScreen.storyboard */; };
 		706EA32D1D421A2C007B2E3B /* SearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706EA32C1D421A2C007B2E3B /* SearchBarViewController.swift */; };
+		7087D70A1D4643BF00F3130C /* SearchBarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7087D7081D4643BF00F3130C /* SearchBarMenu.swift */; };
+		7087D70B1D4643BF00F3130C /* SearchBarMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7087D7091D4643BF00F3130C /* SearchBarMenu.xib */; };
+		70E8B2CD1D45D90C004AB01A /* SearchBarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E8B2CB1D45D90B004AB01A /* SearchBarCollectionViewCell.swift */; };
+		70E8B2CE1D45D90C004AB01A /* SearchBarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E8B2CC1D45D90B004AB01A /* SearchBarCollectionViewCell.xib */; };
 		70EEEF7D1D40C97600E18CB0 /* SubCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EEEF7C1D40C97600E18CB0 /* SubCategoryController.swift */; };
 		70EEEF7F1D40C97D00E18CB0 /* SubCategoryControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EEEF7E1D40C97D00E18CB0 /* SubCategoryControllerProtocol.swift */; };
 		70EEEF811D40C98800E18CB0 /* SubCategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EEEF801D40C98800E18CB0 /* SubCategoryViewCell.swift */; };
@@ -47,12 +56,21 @@
 		7001F0091D433E7E00CC197C /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		7001F00B1D433FBD00CC197C /* SearchViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewControllerProtocol.swift; sourceTree = "<group>"; };
 		7001F00D1D43402100CC197C /* SearchControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchControllerProtocol.swift; sourceTree = "<group>"; };
+		7001F0121D43982E00CC197C /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		7001F0141D43984000CC197C /* HistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
+		7001F0161D43985800CC197C /* HistoryControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryControllerProtocol.swift; sourceTree = "<group>"; };
+		7001F0181D43986C00CC197C /* HistoryViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewControllerProtocol.swift; sourceTree = "<group>"; };
+		7001F01A1D4398FE00CC197C /* HistoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		702A4A8B1D4249A000CCEE94 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7045BF861D3A4157003614E3 /* AppyStoreApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppyStoreApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7045BF891D3A4157003614E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7045BF931D3A4157003614E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7045BF951D3A4157003614E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		706EA32C1D421A2C007B2E3B /* SearchBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarViewController.swift; sourceTree = "<group>"; };
+		7087D7081D4643BF00F3130C /* SearchBarMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarMenu.swift; sourceTree = "<group>"; };
+		7087D7091D4643BF00F3130C /* SearchBarMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchBarMenu.xib; sourceTree = "<group>"; };
+		70E8B2CB1D45D90B004AB01A /* SearchBarCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarCollectionViewCell.swift; sourceTree = "<group>"; };
+		70E8B2CC1D45D90B004AB01A /* SearchBarCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchBarCollectionViewCell.xib; sourceTree = "<group>"; };
 		70EEEF7C1D40C97600E18CB0 /* SubCategoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoryController.swift; sourceTree = "<group>"; };
 		70EEEF7E1D40C97D00E18CB0 /* SubCategoryControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoryControllerProtocol.swift; sourceTree = "<group>"; };
 		70EEEF801D40C98800E18CB0 /* SubCategoryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoryViewCell.swift; sourceTree = "<group>"; };
@@ -128,6 +146,8 @@
 			children = (
 				706EA32C1D421A2C007B2E3B /* SearchBarViewController.swift */,
 				7001F00B1D433FBD00CC197C /* SearchViewControllerProtocol.swift */,
+				7087D70C1D4643CC00F3130C /* SearchBarMenu */,
+				7087D7071D462C6A00F3130C /* SearchCustomCell */,
 			);
 			name = SearchView;
 			sourceTree = "<group>";
@@ -141,9 +161,38 @@
 			name = SearchController;
 			sourceTree = "<group>";
 		};
+		7001F00F1D4397F800CC197C /* History */ = {
+			isa = PBXGroup;
+			children = (
+				7001F0101D43980100CC197C /* History View */,
+				7001F0111D43980B00CC197C /* History Controller */,
+			);
+			name = History;
+			sourceTree = "<group>";
+		};
+		7001F0101D43980100CC197C /* History View */ = {
+			isa = PBXGroup;
+			children = (
+				7001F0121D43982E00CC197C /* HistoryViewController.swift */,
+				7001F0181D43986C00CC197C /* HistoryViewControllerProtocol.swift */,
+				7001F01A1D4398FE00CC197C /* HistoryCollectionViewCell.swift */,
+			);
+			name = "History View";
+			sourceTree = "<group>";
+		};
+		7001F0111D43980B00CC197C /* History Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7001F0141D43984000CC197C /* HistoryController.swift */,
+				7001F0161D43985800CC197C /* HistoryControllerProtocol.swift */,
+			);
+			name = "History Controller";
+			sourceTree = "<group>";
+		};
 		7045BF7D1D3A4156003614E3 = {
 			isa = PBXGroup;
 			children = (
+				7001F00F1D4397F800CC197C /* History */,
 				7001F0041D433E1400CC197C /* Search */,
 				70EEEF781D40C85300E18CB0 /* SubCategory */,
 				0AF521381D408B81009611B1 /* Category Views */,
@@ -186,6 +235,24 @@
 				0AF5213D1D408C5F009611B1 /* LoginViewController.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		7087D7071D462C6A00F3130C /* SearchCustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				70E8B2CB1D45D90B004AB01A /* SearchBarCollectionViewCell.swift */,
+				70E8B2CC1D45D90B004AB01A /* SearchBarCollectionViewCell.xib */,
+			);
+			name = SearchCustomCell;
+			sourceTree = "<group>";
+		};
+		7087D70C1D4643CC00F3130C /* SearchBarMenu */ = {
+			isa = PBXGroup;
+			children = (
+				7087D7081D4643BF00F3130C /* SearchBarMenu.swift */,
+				7087D7091D4643BF00F3130C /* SearchBarMenu.xib */,
+			);
+			name = SearchBarMenu;
 			sourceTree = "<group>";
 		};
 		70EEEF781D40C85300E18CB0 /* SubCategory */ = {
@@ -289,6 +356,8 @@
 			files = (
 				0AF5214A1D408E26009611B1 /* Main.storyboard in Resources */,
 				0AF5214C1D408EE0009611B1 /* Assets.xcassets in Resources */,
+				70E8B2CE1D45D90C004AB01A /* SearchBarCollectionViewCell.xib in Resources */,
+				7087D70B1D4643BF00F3130C /* SearchBarMenu.xib in Resources */,
 				7045BF941D3A4157003614E3 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,21 +420,28 @@
 				70EEEF851D40C99B00E18CB0 /* SubCategoryViewContollerProtocol.swift in Sources */,
 				0AF521421D408C5F009611B1 /* LoginViewController.swift in Sources */,
 				706EA32D1D421A2C007B2E3B /* SearchBarViewController.swift in Sources */,
+				7001F0131D43982E00CC197C /* HistoryViewController.swift in Sources */,
 				0AF5213E1D408C5F009611B1 /* CategoryViewController.swift in Sources */,
 				7045BF8A1D3A4157003614E3 /* AppDelegate.swift in Sources */,
 				70EEEF811D40C98800E18CB0 /* SubCategoryViewCell.swift in Sources */,
 				0AF521411D408C5F009611B1 /* DetailViewController.swift in Sources */,
+				7001F0171D43985800CC197C /* HistoryControllerProtocol.swift in Sources */,
 				7001F00A1D433E7E00CC197C /* SearchController.swift in Sources */,
 				0AF521401D408C5F009611B1 /* ViewProtocol.swift in Sources */,
+				7001F01B1D4398FE00CC197C /* HistoryCollectionViewCell.swift in Sources */,
+				7001F0151D43984000CC197C /* HistoryController.swift in Sources */,
 				702A4A8C1D4249A000CCEE94 /* ViewController.swift in Sources */,
 				0AF5213F1D408C5F009611B1 /* CategoryViewControllerCell.swift in Sources */,
 				0AF521451D408D61009611B1 /* Controllerprotocol.swift in Sources */,
 				70EEEF7D1D40C97600E18CB0 /* SubCategoryController.swift in Sources */,
+				7001F0191D43986C00CC197C /* HistoryViewControllerProtocol.swift in Sources */,
 				0AF521461D408D61009611B1 /* controller.swift in Sources */,
 				7001F00C1D433FBD00CC197C /* SearchViewControllerProtocol.swift in Sources */,
 				70EEEF831D40C99400E18CB0 /* SubCategoryViewContoller.swift in Sources */,
+				70E8B2CD1D45D90C004AB01A /* SearchBarCollectionViewCell.swift in Sources */,
 				7001F00E1D43402100CC197C /* SearchControllerProtocol.swift in Sources */,
 				70EEEF7F1D40C97D00E18CB0 /* SubCategoryControllerProtocol.swift in Sources */,
+				7087D70A1D4643BF00F3130C /* SearchBarMenu.swift in Sources */,
 				70EEEF871D40C9A700E18CB0 /* RestService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

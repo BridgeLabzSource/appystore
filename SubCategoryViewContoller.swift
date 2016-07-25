@@ -91,12 +91,9 @@ class SubCategoryViewContoller: UIViewController,UICollectionViewDataSource,UICo
         mPlayerViewController = AVPlayerViewController()
         
         mPlayerViewController.player = mVideoPlayer
-        
-       // NSNotificationCenter.defaultCenter().
         self.presentViewController(mPlayerViewController, animated: true ){
             self.mPlayerViewController.player?.play()
         }
-//        performSegueWithIdentifier("PlayVideo", sender: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -1,5 +1,5 @@
 //
-//  SearchViewControllerProtocol.swift
+//  HistoryControllerProtocol.swift
 //  AppyStoreApplication
 //
 //  Created by BridgeIt on 23/07/16.
@@ -7,6 +7,7 @@
 //
 
 
-protocol SearchViewControllerProtocol {
-    func updataSearchViewController()
+protocol HistoryControllerProtocol {
+
+    func updateHistoryController(list : AnyObject)
 }

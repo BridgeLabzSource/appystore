@@ -80,18 +80,14 @@ idstring = callcontroller.datalist[indexPath.row]["parent_category_id"] as! Stri
 }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "userSelectSegue") {
-            
- //           let nextVC = segue.destinationViewController as! SubCategoryViewContoller;
-           
-//
-//            let defaults = NSUserDefaults.standardUserDefaults()
-//            defaults.setObject(idstring!, forKey: "category_id1")
-           
-        
+        if (segue.identifier == "SubCategoryView") {
+            let SubCategoryViewObj = segue.destinationViewController as! SubCategoryViewContoller
+            SubCategoryViewObj.mSelectedCategory = callcontroller.datalist[selectedIndex]
         }
-        let SubCategoryViewObj = segue.destinationViewController as! SubCategoryViewContoller
-        SubCategoryViewObj.mSelectedCategory = callcontroller.datalist[selectedIndex]
+        else if (segue.identifier == "CategoryToSearch") {
+            
+        }
+       
         
         
     }
@@ -141,6 +137,7 @@ idstring = callcontroller.datalist[indexPath.row]["parent_category_id"] as! Stri
     @IBAction func fourth1(sender: UIButton) {
         changesimages()
             fourth.setImage(UIImage(named: "searchbackground"), forState: UIControlState.Normal)
+        performSegueWithIdentifier("CategoryToSearch", sender: nil)
     }
     
     

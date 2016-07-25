@@ -21,15 +21,14 @@ class SubCategoryController: SubCategoryControllerProtocol {
         mRestServiceObj = RestService()
         let cid = Int(category["category_id"] as! String)
         let pid = Int(category["parent_category_id"] as! String)
-        print(cid)
-        var url = "http://beta.appystore.in/appy_app/appyApi_handler.php?method=getContentList&content_type=videos&limit=5&offset=0&catid=\(cid!)&pcatid=\(pid!)&age=1.5&incl_age=5"
+      //  var url = "http://beta.appystore.in/appy_app/appyApi_handler.php?method=getContentList&content_type=videos&limit=5&offset=0&catid=\(cid!)&pcatid=\(pid!)&age=1.5&incl_age=5"
+        var url = "http://beta.appystore.in/appy_app/appyApi_handler.php?method=getContentList&content_type=videos&limit=5&offset=0&catid=175&pcatid=174&age=1.5&incl_age=5"
         mRestServiceObj.mGetSubCategoryList(self,url: url)
     }
     
     func updateSubCategoryController (list : AnyObject) {
         mSubCatagoryList = list as! NSMutableArray
       //  mSubCategoryListCount = list["total_count"] as! Int
-        print(mSubCategoryListCount)
         mSubCategoryViewContollerProtocolObj.updateCollectionVIew()
     }
     

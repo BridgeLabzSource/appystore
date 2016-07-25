@@ -9,4 +9,5 @@
 
 protocol SearchControllerProtocol {
     func updataSearchController (list : AnyObject)
+    func updataSearchController ()
 }

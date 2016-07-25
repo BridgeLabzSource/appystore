@@ -41,16 +41,28 @@ class RestService: NSObject {
                 let contentList = content["Responsedetails"]!["data_array"]
                 controllerProtocolObj.updateSubCategoryController(contentList!!)
         }
-
     }
     
-    //method to get search category list
-    func mGetSearchCategoryList (controllerProtocolObj : SearchViewControllerProtocol , keyWord : String) {
+    //method to get search category list 
+    func mGetSearchCategoryList (controllerProtocolObj : SearchControllerProtocol , keyWord : String) {
+        print(keyWord)
         Alamofire.request(.GET, "http://beta.appystore.in/appy_app/appyApi_handler.php?method=search&keyword=\(keyWord)&content_type=appsgames&limit=5&offset=0&age=1&incl_age=6", headers: header)
             .responseJSON { response in
-                var content = response.result.value as! [String : AnyObject]
-                let contentList = content["Responsedetails"]!["data_array"]
-                controllerProtocolObj.updataSearchViewController(contentList!!)
+                if response.result.value != nil {
+                    var content = response.result.value as! [String : AnyObject]
+                    if (content["ResponseMessage"] as! String == "Success") {
+                        let contentList = content["Responsedetails"]?[0]!["data_array"]
+                        controllerProtocolObj.updataSearchController(contentList!!)
+                    }
+                    else {
+                        controllerProtocolObj.updataSearchController()
+                    }
+                    
+                }
+                else {
+                    print("Failed")
+                }
+
         }
     }
     
