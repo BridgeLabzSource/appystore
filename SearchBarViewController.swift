@@ -55,19 +55,11 @@ class SearchBarViewController: UIViewController, UICollectionViewDataSource,UICo
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(mSearchControllerObj.mSearchCategoryList.count)
         return mSearchControllerObj.mSearchCategoryList.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        if checker != true {
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! SearchBarCollectionViewCell
-            
-            
-            return cell
-            
-        }
-        else {
+
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SearchBarCell", forIndexPath: indexPath) as! SearchBarCollectionViewCell
             cell.mVideoImage.image = UIImage(named: "loading_img.png")
             cell.mVideoNameLabel.text = self.mSearchControllerObj.mSearchCategoryList[indexPath.row]["title"] as? String
@@ -81,13 +73,8 @@ class SearchBarViewController: UIViewController, UICollectionViewDataSource,UICo
                     else {
                         cell.mVideoImage.image = UIImage(named: "loading_img.png")
                     }
-                    
-            }
-            return cell
         }
-
-        
-
+         return cell
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
@@ -103,21 +90,17 @@ class SearchBarViewController: UIViewController, UICollectionViewDataSource,UICo
     }
     
     func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
-//        var reuseableCell = UICollectionReusableView()
-//        reuseableCell = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "", forIndexPath: indexPath) as! SearchBarMenu
-//        
-//        return reuseableCell
+        var cell = UICollectionReusableView()
+        if (kind == UICollectionElementKindSectionHeader){
+            var headerCV = collectionView.dequeueReusableCellWithReuseIdentifier("HeaderView", forIndexPath: indexPath) as! CollectionReusableView
+            
+            headerCV.userlabel.text = "hello world"
+            cell = headerCV
+        }
+        return cell
         
-        let headerView =
-        collectionView.dequeueReusableSupplementaryViewOfKind(kind,
-            withReuseIdentifier: "CollectionViewHeader",
-            forIndexPath: indexPath)
-            as! SearchBarMenu
-        
-    //    headerView.label.text = labels[indexPath.section]
-        
-        return headerView
     }
+    
     
     func updataSearchViewController () {
   

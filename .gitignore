@@ -135,7 +135,6 @@ iOSInjectionProject/
 *.xcscmblueprint
 .DS_Store
 tmp
-Main.storyboard
 Podfile.lock
 Pods
 Podfile
