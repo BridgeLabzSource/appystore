@@ -13,15 +13,18 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="128" height="120"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x5O-FN-ZCJ">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x5O-FN-ZCJ">
                         <rect key="frame" x="0.0" y="0.0" width="128" height="95"/>
                         <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="95" id="Ysd-KX-S2d"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dv7-Eq-NzY">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dv7-Eq-NzY">
                         <rect key="frame" x="0.0" y="95" width="128" height="25"/>
                         <animations/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -29,6 +32,15 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <animations/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="x5O-FN-ZCJ" secondAttribute="trailing" id="41m-nr-67n"/>
+                <constraint firstItem="Dv7-Eq-NzY" firstAttribute="leading" secondItem="x5O-FN-ZCJ" secondAttribute="leading" id="9uW-1S-eiw"/>
+                <constraint firstItem="Dv7-Eq-NzY" firstAttribute="top" secondItem="x5O-FN-ZCJ" secondAttribute="bottom" id="aMS-EV-v76"/>
+                <constraint firstItem="Dv7-Eq-NzY" firstAttribute="trailing" secondItem="x5O-FN-ZCJ" secondAttribute="trailing" id="nk8-0e-ADp"/>
+                <constraint firstAttribute="bottom" secondItem="Dv7-Eq-NzY" secondAttribute="bottom" id="tGJ-ih-rJz"/>
+                <constraint firstItem="x5O-FN-ZCJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="uVU-PC-jIh"/>
+                <constraint firstItem="x5O-FN-ZCJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uzc-JN-HDm"/>
+            </constraints>
             <connections>
                 <outlet property="mVideoImage" destination="x5O-FN-ZCJ" id="6Ye-ld-GGM"/>
                 <outlet property="mVideoNameLabel" destination="Dv7-Eq-NzY" id="32b-L8-xE5"/>

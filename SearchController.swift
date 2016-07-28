@@ -18,20 +18,20 @@ class SearchController: SearchControllerProtocol {
     init() {
         
     }
-    
-    init(SviewProtocolObj : SearchViewControllerProtocol,inputText : String) {
+
+    func mGetSearchDetails (SviewProtocolObj : SearchViewControllerProtocol,inputText : String, offset : Int) {
         mSearchViewControllerProtocolObj = SviewProtocolObj
         mRestServiceObj = RestService()
-        mRestServiceObj.mGetSearchCategoryList(self, keyWord: inputText)
-
+        mRestServiceObj.mGetSearchCategoryList(self, keyWord: inputText,offSet : offset )
     }
 
-    func updataSearchController (list : AnyObject) {
-        mSearchCategoryList = list as! NSMutableArray
-            mSearchViewControllerProtocolObj.updataSearchViewController()
+    func updataSearchController (list : AnyObject,count : Int) {
+        mSearchCategoryList.addObjectsFromArray(list as! NSMutableArray as [AnyObject])
+        mSearchCategoryListCount = count
+        mSearchViewControllerProtocolObj.updataSearchViewController()
     }
     
     func updataSearchController () {
-            mSearchViewControllerProtocolObj.updataSearchViewController()
+        mSearchViewControllerProtocolObj.updataSearchViewController()
     }
 }

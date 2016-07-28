@@ -37,12 +37,17 @@ class SubCategoryViewContoller: UIViewController,UICollectionViewDataSource,UICo
     var historyChecker = false
     var mSelectedCategory : AnyObject?
     var mSelectedCategoryCount = 0
+    var ListCount = 0
     
     override func viewDidLoad() {
+        collectionView.collectionViewLayout = CustomViewFlowLayout(width : CGRectGetWidth(self.view.frame))
         mChangeButtonImage()
         mVideoButtonLabel.setImage(UIImage(named: "videobackground.png"), forState: UIControlState.Normal)
         super.viewDidLoad()
-        mSubCategoryControllerObj = SubCategoryController(SCviewProtocolObj: self , category: mSelectedCategory)
+        mSubCategoryControllerObj = SubCategoryController()
+        
+        mSubCategoryControllerObj.mGetSubCategoryDetails(self , category: mSelectedCategory,offset : ListCount)
+        
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundimage.jpg")!)
         collectionView.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundimage.jpg")!)
     }
@@ -66,7 +71,7 @@ class SubCategoryViewContoller: UIViewController,UICollectionViewDataSource,UICo
         cell.videoNameLabel.text = mSubCategoryControllerObj.mSubCatagoryList[indexPath.row]["title"] as? String
         cell.videoImageVIew.image = UIImage(named: "loading_img.png")
         //Fetch video image
-        Alamofire.request(.GET, "http://s.mobimgs.com/m/%217YzqfmB2xlvxWZhs6NK4u0UCduaKvts8yS%21vhlN%21Z447cg8Hv8Al8zwoy2LyPCntDbdyPS97VQFsvZ5f5Y5MbilpEYs79CfQYxRqk%21xMmE%3D/20077841.mp4.jpg")
+        Alamofire.request(.GET, self.mSubCategoryControllerObj.mSubCatagoryList[indexPath.row]["image_path"] as! String)
             .responseImage { response in
                 cell.videoImageVIew.stopAnimating()
                 if (response.result.value != nil) {
@@ -96,9 +101,18 @@ class SubCategoryViewContoller: UIViewController,UICollectionViewDataSource,UICo
         }
     }
     
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        ListCount += 9
+        if (ListCount < mSubCategoryControllerObj.mSubCategoryListCount) {
+            mSubCategoryControllerObj.mGetSubCategoryDetails(self , category: mSelectedCategory,offset : ListCount)
+        }
+        else {
+            
+        }
+    }
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        let videoPlayerObj = segue.destinationViewController as! VIdeoPlayerViewController
-//        videoPlayerObj.mVideoUrl = mSubCategoryControllerObj.mSubCatagoryList[index]["dnld_url"] as! String
+
     }
     
     //Method to update collection view
@@ -123,15 +137,12 @@ class SubCategoryViewContoller: UIViewController,UICollectionViewDataSource,UICo
     @IBAction func mHistoryButton(sender: UIButton) {
         mChangeButtonImage()
         mHistoryButtonLabel.setImage(UIImage(named: "historybackground.png"), forState: UIControlState.Normal)
-        
+        performSegueWithIdentifier("SubCategoryToHistory", sender: nil)
     }
     
     @IBAction func mSearchButton(sender: UIButton) {
         mChangeButtonImage()
         mSearchButtonLabel.setImage(UIImage(named: "searchbackground.png"), forState: UIControlState.Normal)
-        
-        let searchBar = UISearchBar()
-        
     }
     
     @IBAction func mCartButton(sender: UIButton) {

@@ -8,6 +8,6 @@
 
 
 protocol SearchControllerProtocol {
-    func updataSearchController (list : AnyObject)
+    func updataSearchController (list : AnyObject,count : Int)
     func updataSearchController ()
 }

@@ -16,13 +16,13 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        loginview.layer.contents = UIImage(named:"backgroundimage")!.CGImage
-        labellogin.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundimage")!)
+        loginview.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundimage.jpg")!)
+        //loginview.layer.contents = UIImage(named:"backgroundimage")!.CGImage
+        //labellogin.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundimage")!)
         labellogin.text="Welcome to Appystore"
         labellogin.layer.cornerRadius = 0.0;
         labellogin.layer.masksToBounds = true;
-        labellogin.layer.borderColor=UIColor .redColor().CGColor
+        //labellogin.layer.borderColor=UIColor .redColor().CGColor
         
             
         }

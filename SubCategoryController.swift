@@ -14,21 +14,22 @@ class SubCategoryController: SubCategoryControllerProtocol {
     var mSubCategoryListCount = 0
     var mRestServiceObj : RestService!
     var mSubCategoryViewContollerProtocolObj : SubCategoryViewContollerProtocol!
-    var url = "http://beta.appystore.in/appy_app/appyApi_handler.php?method=getContentList&content_type=videos&limit=5&offset=0&catid=175&pcatid=174&age=1.5&incl_age=5"
+
     
-    init(SCviewProtocolObj : SubCategoryViewContollerProtocol, category : AnyObject!) {
+    func mGetSubCategoryDetails (SCviewProtocolObj : SubCategoryViewContollerProtocol, category : AnyObject! , offset : Int) {
         mSubCategoryViewContollerProtocolObj = SCviewProtocolObj
         mRestServiceObj = RestService()
         let cid = Int(category["category_id"] as! String)
         let pid = Int(category["parent_category_id"] as! String)
-      //  var url = "http://beta.appystore.in/appy_app/appyApi_handler.php?method=getContentList&content_type=videos&limit=5&offset=0&catid=\(cid!)&pcatid=\(pid!)&age=1.5&incl_age=5"
-        var url = "http://beta.appystore.in/appy_app/appyApi_handler.php?method=getContentList&content_type=videos&limit=5&offset=0&catid=175&pcatid=174&age=1.5&incl_age=5"
+        var url = "http://beta.appystore.in/appy_app/appyApi_handler.php?method=getContentList&content_type=videos&limit=9&offset=\(offset)&catid=\(cid!)&pcatid=\(pid!)&age=1.5&incl_age=5"
+
         mRestServiceObj.mGetSubCategoryList(self,url: url)
     }
     
-    func updateSubCategoryController (list : AnyObject) {
-        mSubCatagoryList = list as! NSMutableArray
-      //  mSubCategoryListCount = list["total_count"] as! Int
+    func updateSubCategoryController (list : AnyObject , count : Int) {
+       // mSubCatagoryList = list as! NSMutableArray
+        mSubCatagoryList.addObjectsFromArray(list as! NSMutableArray as [AnyObject])
+        mSubCategoryListCount = count
         mSubCategoryViewContollerProtocolObj.updateCollectionVIew()
     }
     

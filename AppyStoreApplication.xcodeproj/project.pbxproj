@@ -29,11 +29,15 @@
 		7045BF8A1D3A4157003614E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045BF891D3A4157003614E3 /* AppDelegate.swift */; };
 		7045BF941D3A4157003614E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7045BF921D3A4157003614E3 /* LaunchScreen.storyboard */; };
 		706EA32D1D421A2C007B2E3B /* SearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706EA32C1D421A2C007B2E3B /* SearchBarViewController.swift */; };
-		7087D70A1D4643BF00F3130C /* SearchBarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7087D7081D4643BF00F3130C /* SearchBarMenu.swift */; };
-		7087D70B1D4643BF00F3130C /* SearchBarMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7087D7091D4643BF00F3130C /* SearchBarMenu.xib */; };
+		70BE283E1D4878F500E564ED /* LogOutScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE283D1D4878F400E564ED /* LogOutScreenViewController.swift */; };
+		70BE28401D48845900E564ED /* LogOutScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE283F1D48845900E564ED /* LogOutScreenController.swift */; };
+		70BE28451D48CA4400E564ED /* LocalDataDase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE28441D48CA4400E564ED /* LocalDataDase.swift */; };
+		70BE28471D48CA8C00E564ED /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BE28461D48CA8C00E564ED /* libsqlite3.tbd */; };
+		70BE284C1D48CC1000E564ED /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BE284B1D48CC1000E564ED /* FMDB.framework */; };
 		70E8B2CD1D45D90C004AB01A /* SearchBarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E8B2CB1D45D90B004AB01A /* SearchBarCollectionViewCell.swift */; };
 		70E8B2CE1D45D90C004AB01A /* SearchBarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E8B2CC1D45D90B004AB01A /* SearchBarCollectionViewCell.xib */; };
 		70EB8B071D47257200E636C5 /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB8B061D47257200E636C5 /* CollectionReusableView.swift */; };
+		70EB8B0B1D4769EC00E636C5 /* CustomViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB8B0A1D4769EC00E636C5 /* CustomViewFlowLayout.swift */; };
 		70EEEF7D1D40C97600E18CB0 /* SubCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EEEF7C1D40C97600E18CB0 /* SubCategoryController.swift */; };
 		70EEEF7F1D40C97D00E18CB0 /* SubCategoryControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EEEF7E1D40C97D00E18CB0 /* SubCategoryControllerProtocol.swift */; };
 		70EEEF811D40C98800E18CB0 /* SubCategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EEEF801D40C98800E18CB0 /* SubCategoryViewCell.swift */; };
@@ -67,12 +71,17 @@
 		7045BF891D3A4157003614E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7045BF931D3A4157003614E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7045BF951D3A4157003614E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		706EA32C1D421A2C007B2E3B /* SearchBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarViewController.swift; sourceTree = "<group>"; };
-		7087D7081D4643BF00F3130C /* SearchBarMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarMenu.swift; sourceTree = "<group>"; };
-		7087D7091D4643BF00F3130C /* SearchBarMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchBarMenu.xib; sourceTree = "<group>"; };
+		706EA32C1D421A2C007B2E3B /* SearchBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SearchBarViewController.swift; sourceTree = "<group>"; };
+		70BE283D1D4878F400E564ED /* LogOutScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutScreenViewController.swift; sourceTree = "<group>"; };
+		70BE283F1D48845900E564ED /* LogOutScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutScreenController.swift; sourceTree = "<group>"; };
+		70BE28441D48CA4400E564ED /* LocalDataDase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataDase.swift; sourceTree = "<group>"; };
+		70BE28461D48CA8C00E564ED /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		70BE28481D48CB5200E564ED /* AppyStoreApplication-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppyStoreApplication-Bridging-Header.h"; sourceTree = "<group>"; };
+		70BE284B1D48CC1000E564ED /* FMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FMDB.framework; path = "Pods/../build/Debug-iphoneos/FMDB/FMDB.framework"; sourceTree = "<group>"; };
 		70E8B2CB1D45D90B004AB01A /* SearchBarCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarCollectionViewCell.swift; sourceTree = "<group>"; };
 		70E8B2CC1D45D90B004AB01A /* SearchBarCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchBarCollectionViewCell.xib; sourceTree = "<group>"; };
 		70EB8B061D47257200E636C5 /* CollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
+		70EB8B0A1D4769EC00E636C5 /* CustomViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewFlowLayout.swift; sourceTree = "<group>"; };
 		70EEEF7C1D40C97600E18CB0 /* SubCategoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoryController.swift; sourceTree = "<group>"; };
 		70EEEF7E1D40C97D00E18CB0 /* SubCategoryControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoryControllerProtocol.swift; sourceTree = "<group>"; };
 		70EEEF801D40C98800E18CB0 /* SubCategoryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoryViewCell.swift; sourceTree = "<group>"; };
@@ -90,6 +99,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70BE284C1D48CC1000E564ED /* FMDB.framework in Frameworks */,
+				70BE28471D48CA8C00E564ED /* libsqlite3.tbd in Frameworks */,
 				0AF521351D408AF4009611B1 /* Alamofire.framework in Frameworks */,
 				7C9DDD55534154B4ACF47B18 /* Pods_AppyStoreApplication.framework in Frameworks */,
 			);
@@ -101,7 +112,7 @@
 		0AF521361D408B63009611B1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				70EEEF861D40C9A700E18CB0 /* RestService.swift */,
+				70BE28441D48CA4400E564ED /* LocalDataDase.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -127,6 +138,8 @@
 		6EA365EF8A3BA2194DF7F161 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				70BE284B1D48CC1000E564ED /* FMDB.framework */,
+				70BE28461D48CA8C00E564ED /* libsqlite3.tbd */,
 				70EEEF8A1D40D2EB00E18CB0 /* AlamofireImage.framework */,
 				0AF521341D408AF4009611B1 /* Alamofire.framework */,
 				789F91469482654E3E6B56E3 /* Pods_AppyStoreApplication.framework */,
@@ -148,9 +161,8 @@
 			children = (
 				706EA32C1D421A2C007B2E3B /* SearchBarViewController.swift */,
 				7001F00B1D433FBD00CC197C /* SearchViewControllerProtocol.swift */,
-				7087D70C1D4643CC00F3130C /* SearchBarMenu */,
 				7087D7071D462C6A00F3130C /* SearchCustomCell */,
-				70EB8B061D47257200E636C5 /* CollectionReusableView.swift */,
+				70EB8B091D47673300E636C5 /* SearchReusableCell */,
 			);
 			name = SearchView;
 			sourceTree = "<group>";
@@ -195,15 +207,19 @@
 		7045BF7D1D3A4156003614E3 = {
 			isa = PBXGroup;
 			children = (
+				70EB8B0A1D4769EC00E636C5 /* CustomViewFlowLayout.swift */,
 				7001F00F1D4397F800CC197C /* History */,
 				7001F0041D433E1400CC197C /* Search */,
 				70EEEF781D40C85300E18CB0 /* SubCategory */,
 				0AF521381D408B81009611B1 /* Category Views */,
+				70BE283C1D4878B100E564ED /* LogOutScreen */,
 				0AF521361D408B63009611B1 /* Model */,
+				70BE28431D48C9FA00E564ED /* Services */,
 				7045BF881D3A4157003614E3 /* AppyStoreApplication */,
 				7045BF871D3A4157003614E3 /* Products */,
 				EEB96E31DE06C2D7CC88551D /* Pods */,
 				6EA365EF8A3BA2194DF7F161 /* Frameworks */,
+				70BE28481D48CB5200E564ED /* AppyStoreApplication-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -249,13 +265,45 @@
 			name = SearchCustomCell;
 			sourceTree = "<group>";
 		};
-		7087D70C1D4643CC00F3130C /* SearchBarMenu */ = {
+		70BE283C1D4878B100E564ED /* LogOutScreen */ = {
 			isa = PBXGroup;
 			children = (
-				7087D7081D4643BF00F3130C /* SearchBarMenu.swift */,
-				7087D7091D4643BF00F3130C /* SearchBarMenu.xib */,
+				70BE28421D488F9800E564ED /* LogoutVIew */,
+				70BE28411D488F8900E564ED /* Logout Controller */,
 			);
-			name = SearchBarMenu;
+			name = LogOutScreen;
+			sourceTree = "<group>";
+		};
+		70BE28411D488F8900E564ED /* Logout Controller */ = {
+			isa = PBXGroup;
+			children = (
+				70BE283F1D48845900E564ED /* LogOutScreenController.swift */,
+			);
+			name = "Logout Controller";
+			sourceTree = "<group>";
+		};
+		70BE28421D488F9800E564ED /* LogoutVIew */ = {
+			isa = PBXGroup;
+			children = (
+				70BE283D1D4878F400E564ED /* LogOutScreenViewController.swift */,
+			);
+			name = LogoutVIew;
+			sourceTree = "<group>";
+		};
+		70BE28431D48C9FA00E564ED /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				70EEEF861D40C9A700E18CB0 /* RestService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		70EB8B091D47673300E636C5 /* SearchReusableCell */ = {
+			isa = PBXGroup;
+			children = (
+				70EB8B061D47257200E636C5 /* CollectionReusableView.swift */,
+			);
+			name = SearchReusableCell;
 			sourceTree = "<group>";
 		};
 		70EEEF781D40C85300E18CB0 /* SubCategory */ = {
@@ -360,7 +408,6 @@
 				0AF5214A1D408E26009611B1 /* Main.storyboard in Resources */,
 				0AF5214C1D408EE0009611B1 /* Assets.xcassets in Resources */,
 				70E8B2CE1D45D90C004AB01A /* SearchBarCollectionViewCell.xib in Resources */,
-				7087D70B1D4643BF00F3130C /* SearchBarMenu.xib in Resources */,
 				7045BF941D3A4157003614E3 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,14 +467,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70BE28451D48CA4400E564ED /* LocalDataDase.swift in Sources */,
 				70EEEF851D40C99B00E18CB0 /* SubCategoryViewContollerProtocol.swift in Sources */,
 				0AF521421D408C5F009611B1 /* LoginViewController.swift in Sources */,
 				706EA32D1D421A2C007B2E3B /* SearchBarViewController.swift in Sources */,
 				7001F0131D43982E00CC197C /* HistoryViewController.swift in Sources */,
 				0AF5213E1D408C5F009611B1 /* CategoryViewController.swift in Sources */,
 				7045BF8A1D3A4157003614E3 /* AppDelegate.swift in Sources */,
+				70BE28401D48845900E564ED /* LogOutScreenController.swift in Sources */,
 				70EEEF811D40C98800E18CB0 /* SubCategoryViewCell.swift in Sources */,
 				0AF521411D408C5F009611B1 /* DetailViewController.swift in Sources */,
+				70EB8B0B1D4769EC00E636C5 /* CustomViewFlowLayout.swift in Sources */,
 				7001F0171D43985800CC197C /* HistoryControllerProtocol.swift in Sources */,
 				70EB8B071D47257200E636C5 /* CollectionReusableView.swift in Sources */,
 				7001F00A1D433E7E00CC197C /* SearchController.swift in Sources */,
@@ -443,9 +493,9 @@
 				7001F00C1D433FBD00CC197C /* SearchViewControllerProtocol.swift in Sources */,
 				70EEEF831D40C99400E18CB0 /* SubCategoryViewContoller.swift in Sources */,
 				70E8B2CD1D45D90C004AB01A /* SearchBarCollectionViewCell.swift in Sources */,
+				70BE283E1D4878F500E564ED /* LogOutScreenViewController.swift in Sources */,
 				7001F00E1D43402100CC197C /* SearchControllerProtocol.swift in Sources */,
 				70EEEF7F1D40C97D00E18CB0 /* SubCategoryControllerProtocol.swift in Sources */,
-				7087D70A1D4643BF00F3130C /* SearchBarMenu.swift in Sources */,
 				70EEEF871D40C9A700E18CB0 /* RestService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,14 +600,18 @@
 			baseConfigurationReference = C34B8F02E20AE1495BB77EA8 /* Pods-AppyStoreApplication.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/AlamofireImage",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/FMDB",
 				);
 				INFOPLIST_FILE = AppyStoreApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bridgelabz.AppyStoreApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppyStoreApplication-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -566,14 +620,17 @@
 			baseConfigurationReference = CD5BE78F35BE731B393BE637 /* Pods-AppyStoreApplication.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/AlamofireImage",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/FMDB",
 				);
 				INFOPLIST_FILE = AppyStoreApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bridgelabz.AppyStoreApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppyStoreApplication-Bridging-Header.h";
 			};
 			name = Release;
 		};

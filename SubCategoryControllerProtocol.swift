@@ -7,5 +7,5 @@
 //
 
 protocol SubCategoryControllerProtocol {
-    func updateSubCategoryController (list : AnyObject)
+    func updateSubCategoryController (list : AnyObject, count : Int)
 }

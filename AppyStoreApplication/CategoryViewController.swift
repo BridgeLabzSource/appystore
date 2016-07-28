@@ -33,18 +33,13 @@ class CategoryViewController: UIViewController ,UICollectionViewDelegate,UIColle
     
      override func viewDidLoad() {
         super.viewDidLoad()
-       
-       changesimages()
+        collection.collectionViewLayout = CustomViewFlowLayout(width : CGRectGetWidth(self.view.frame))
+        changesimages()
     
         callcontroller = controller(viewprotocolobject: self)
 
-        
-       collection.backgroundView = UIImageView(image: UIImage(named: "backgroundimage"))
-        
-        firstview.layer.contents = UIImage(named:"backgroundimage")!.CGImage
-        
-        
-     
+        collection.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundimage.jpg")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundimage.jpg")!)
     }
 
 func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
@@ -62,12 +57,8 @@ func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath ind
     cell.myimage.text = callcontroller.datalist[indexPath.row]["category_name"] as! String
   
    // let genreId = (callcontroller.datalist[indexPath.row]["id"] as! String).toInt()
-idstring = callcontroller.datalist[indexPath.row]["parent_category_id"] as! String
-   // print(idstring!)
-  
-    
-   // print(idstring)
-//
+    idstring = callcontroller.datalist[indexPath.row]["parent_category_id"] as! String
+
     Alamofire.request(.GET, callcontroller.datalist[indexPath.row]["image_path"]!!["50x50"] as! String).response() {
         (_, _, data, _) in
         let image = UIImage(data: data! as! NSData)
@@ -87,6 +78,7 @@ idstring = callcontroller.datalist[indexPath.row]["parent_category_id"] as! Stri
         else if (segue.identifier == "CategoryToSearch") {
             
         }
+    
        
         
         
@@ -117,7 +109,7 @@ idstring = callcontroller.datalist[indexPath.row]["parent_category_id"] as! Stri
         
         changesimages()
         first.setImage(UIImage(named: "ladybackground"), forState: UIControlState.Normal)
-        
+        performSegueWithIdentifier("LogoutScreen", sender: nil)
          }
     
   
@@ -131,6 +123,7 @@ idstring = callcontroller.datalist[indexPath.row]["parent_category_id"] as! Stri
     @IBAction func third1(sender: UIButton) {
         changesimages()
             third.setImage(UIImage(named: "historybackground"), forState: UIControlState.Normal)
+        performSegueWithIdentifier("CategoryToHistory", sender: nil)
     }
     
     
@@ -166,6 +159,7 @@ idstring = callcontroller.datalist[indexPath.row]["parent_category_id"] as! Stri
 //   // return CGSizeMake(100, 50)
 //return CGSizeMake(view.frame.width, 100)
 //    }
-    
+
 }
+
 

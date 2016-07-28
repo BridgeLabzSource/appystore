@@ -10,9 +10,20 @@ import UIKit
 
 class HistoryController: HistoryControllerProtocol {
 
+    var mHistoryList = NSMutableArray()
+    var mHistoryListCount = 0
+    var mLocalDatabaseObj = LocalDataDase()
     
-    
+    init () {
+        mHistoryList = mLocalDatabaseObj.mFetchValuesFromHistoryTable()
+    }
+    //method to update history view 
     func updateHistoryController(list : AnyObject) {
         
+    }
+    
+    //method to save videos in history
+    func mSaveVideoDetailsInDB (videoDetails : [String : AnyObject]) {
+        mLocalDatabaseObj.mInsertValueInToHistoryTable(videoDetails)
     }
 }
