@@ -1,8 +1,22 @@
 {
   "images" : [
     {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 41,
+          "height" : 1
+        },
+        "cap-insets" : {
+          "bottom" : 0,
+          "top" : 11,
+          "right" : 26,
+          "left" : 3
+        }
+      },
       "idiom" : "universal",
-      "filename" : "loading_img.png",
+      "filename" : "AppIcon.png",
       "scale" : "1x"
     },
     {
