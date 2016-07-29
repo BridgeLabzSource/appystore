@@ -60,7 +60,7 @@ class SearchBarViewController: UIViewController, UICollectionViewDataSource,UICo
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
 
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SearchBarCell", forIndexPath: indexPath) as! SearchBarCollectionViewCell
-            cell.mVideoImage.image = UIImage(named: "loading_img.png")
+           // cell.mVideoImage.image = UIImage(named: "loading_img.png")
             cell.mVideoNameLabel.text = self.mSearchControllerObj.mSearchCategoryList[indexPath.row]["title"] as? String
             
             //Fetch video image
@@ -85,6 +85,9 @@ class SearchBarViewController: UIViewController, UICollectionViewDataSource,UICo
         self.presentViewController(mPlayerViewController, animated: true ){
         self.mPlayerViewController.player?.play()
         }
+        
+        let LocalDB = LocalDataDase()
+        LocalDB.mInsertValueInToHistoryTable(mSearchControllerObj.mSearchCategoryList[indexPath.row] as! [String : AnyObject])
     }
     
     func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {

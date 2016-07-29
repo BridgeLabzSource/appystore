@@ -29,6 +29,7 @@
 		7045BF8A1D3A4157003614E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045BF891D3A4157003614E3 /* AppDelegate.swift */; };
 		7045BF941D3A4157003614E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7045BF921D3A4157003614E3 /* LaunchScreen.storyboard */; };
 		706EA32D1D421A2C007B2E3B /* SearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706EA32C1D421A2C007B2E3B /* SearchBarViewController.swift */; };
+		70B152691D4B274C006EC473 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B152681D4B274C006EC473 /* Utility.swift */; };
 		70BE283E1D4878F500E564ED /* LogOutScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE283D1D4878F400E564ED /* LogOutScreenViewController.swift */; };
 		70BE28401D48845900E564ED /* LogOutScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE283F1D48845900E564ED /* LogOutScreenController.swift */; };
 		70BE28451D48CA4400E564ED /* LocalDataDase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE28441D48CA4400E564ED /* LocalDataDase.swift */; };
@@ -72,6 +73,7 @@
 		7045BF931D3A4157003614E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7045BF951D3A4157003614E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		706EA32C1D421A2C007B2E3B /* SearchBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SearchBarViewController.swift; sourceTree = "<group>"; };
+		70B152681D4B274C006EC473 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		70BE283D1D4878F400E564ED /* LogOutScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutScreenViewController.swift; sourceTree = "<group>"; };
 		70BE283F1D48845900E564ED /* LogOutScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutScreenController.swift; sourceTree = "<group>"; };
 		70BE28441D48CA4400E564ED /* LocalDataDase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataDase.swift; sourceTree = "<group>"; };
@@ -112,7 +114,6 @@
 		0AF521361D408B63009611B1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				70BE28441D48CA4400E564ED /* LocalDataDase.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -207,6 +208,7 @@
 		7045BF7D1D3A4156003614E3 = {
 			isa = PBXGroup;
 			children = (
+				70B152681D4B274C006EC473 /* Utility.swift */,
 				70EB8B0A1D4769EC00E636C5 /* CustomViewFlowLayout.swift */,
 				7001F00F1D4397F800CC197C /* History */,
 				7001F0041D433E1400CC197C /* Search */,
@@ -294,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				70EEEF861D40C9A700E18CB0 /* RestService.swift */,
+				70BE28441D48CA4400E564ED /* LocalDataDase.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 				7001F00C1D433FBD00CC197C /* SearchViewControllerProtocol.swift in Sources */,
 				70EEEF831D40C99400E18CB0 /* SubCategoryViewContoller.swift in Sources */,
 				70E8B2CD1D45D90C004AB01A /* SearchBarCollectionViewCell.swift in Sources */,
+				70B152691D4B274C006EC473 /* Utility.swift in Sources */,
 				70BE283E1D4878F500E564ED /* LogOutScreenViewController.swift in Sources */,
 				7001F00E1D43402100CC197C /* SearchControllerProtocol.swift in Sources */,
 				70EEEF7F1D40C97D00E18CB0 /* SubCategoryControllerProtocol.swift in Sources */,
@@ -607,6 +611,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/FMDB",
 				);
 				INFOPLIST_FILE = AppyStoreApplication/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bridgelabz.AppyStoreApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -627,6 +632,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/FMDB",
 				);
 				INFOPLIST_FILE = AppyStoreApplication/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bridgelabz.AppyStoreApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";

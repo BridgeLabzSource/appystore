@@ -13,26 +13,40 @@ class controller: Controllerprotocol {
     
     var datalist = NSMutableArray()
     var variableprotocol : ViewProtocol!
-    var mRestServiceObj : RestService! 
+    var mRestServiceObj : RestService!
+    var mLocalDatabaseObj = LocalDataDase()
     
     init(viewprotocolobject : ViewProtocol) {
         variableprotocol = viewprotocolobject
-        
-        mRestServiceObj = RestService()
-        mRestServiceObj.mGetCategoryList(self)
-        
-//        alamofireobject = AalmofireRequest()
-//        alamofireobject.almofirerequest(self)
-        
-        
+
+        if Reachability.isConnectedToInternet() {
+            mGetCategoryDetailsFromRestService()
+        }
+        else {
+            mGetCategoryDetailsFromLOcalDB()
+        }
     }
     
-    
     func update(list : AnyObject!){
-        
-       datalist = list as! NSMutableArray
+        datalist = list as! NSMutableArray
+//        mSaveCategoryDetailsInDatabase()
         variableprotocol.updateview()
-        
+    }
+    
+    //method to get category details from Local db
+    func mGetCategoryDetailsFromLOcalDB() {
+        datalist = mLocalDatabaseObj.mFetchValuesFromCategoryTable()
+    }
+    
+    //method to get category details from Rest Services
+    func mGetCategoryDetailsFromRestService() {
+        mRestServiceObj = RestService()
+        mRestServiceObj.mGetCategoryList(self)
+    }
+    
+    //method to sava category details in local databast
+    func mSaveCategoryDetailsInDatabase () {
+        mLocalDatabaseObj.mInsertValueInToCategoryTable(datalist)
     }
     
     

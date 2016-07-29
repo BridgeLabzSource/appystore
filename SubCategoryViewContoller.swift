@@ -69,7 +69,8 @@ class SubCategoryViewContoller: UIViewController,UICollectionViewDataSource,UICo
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SubCategoryCollectionViewCell", forIndexPath: indexPath) as! SubCategoryViewCell
         cell.videoNameLabel.text = mSubCategoryControllerObj.mSubCatagoryList[indexPath.row]["title"] as? String
-        cell.videoImageVIew.image = UIImage(named: "loading_img.png")
+        cell.videoImageVIew.backgroundColor = UIColor(patternImage: UIImage(named: "Cell_Video_BackGround")!)
+        cell.videoImageVIew.image = UIImage(named: "videos_image_box_placeholder")
         //Fetch video image
         Alamofire.request(.GET, self.mSubCategoryControllerObj.mSubCatagoryList[indexPath.row]["image_path"] as! String)
             .responseImage { response in
@@ -99,6 +100,9 @@ class SubCategoryViewContoller: UIViewController,UICollectionViewDataSource,UICo
         self.presentViewController(mPlayerViewController, animated: true ){
             self.mPlayerViewController.player?.play()
         }
+        
+        let LocalDB = LocalDataDase()
+        LocalDB.mInsertValueInToHistoryTable(mSubCategoryControllerObj.mSubCatagoryList[index] as! [String : AnyObject])
     }
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {

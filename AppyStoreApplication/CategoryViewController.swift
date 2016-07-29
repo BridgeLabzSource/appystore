@@ -50,22 +50,16 @@ func collectionView(collectionView: UICollectionView, numberOfItemsInSection sec
 
 func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
     
-    
- let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as! CategoryViewControllerCell
+    let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as! CategoryViewControllerCell
    
-    
-    cell.myimage.text = callcontroller.datalist[indexPath.row]["category_name"] as! String
-  
-   // let genreId = (callcontroller.datalist[indexPath.row]["id"] as! String).toInt()
-    idstring = callcontroller.datalist[indexPath.row]["parent_category_id"] as! String
+    cell.myimage.text = callcontroller.datalist[indexPath.row]["category_name"] as? String
+        idstring = callcontroller.datalist[indexPath.row]["parent_category_id"] as? String
 
     Alamofire.request(.GET, callcontroller.datalist[indexPath.row]["image_path"]!!["50x50"] as! String).response() {
         (_, _, data, _) in
-        let image = UIImage(data: data! as! NSData)
+        let image = UIImage(data: data! )
         cell.mycollectionimage.image = image
     }
-
-
     return cell
    
 }
@@ -78,31 +72,18 @@ func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath ind
         else if (segue.identifier == "CategoryToSearch") {
             
         }
-    
-       
-        
-        
     }
    
     //tableviewdidselectmethod
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
     {
-        
-//        let TableViewController1 = self.storyboard!.instantiateViewControllerWithIdentifier("DetailViewController1") as! DetailViewController
-//        self.navigationController?.pushViewController(TableViewController1, animated: true)
-//        
-//        TableViewController1.categoryid = callcontroller.datalist[indexPath.row]["category_id"] as! Int
         selectedIndex = indexPath.row
         performSegueWithIdentifier("SubCategoryView", sender: nil)
-    
-    
     }
     
     func updateview ()
     {
-    
-    collection.reloadData()
-    
+        collection.reloadData()
     }
     
     @IBAction func first1(sender: UIButton) {

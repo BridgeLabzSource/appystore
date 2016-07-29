@@ -12,18 +12,25 @@ class HistoryController: HistoryControllerProtocol {
 
     var mHistoryList = NSMutableArray()
     var mHistoryListCount = 0
-    var mLocalDatabaseObj = LocalDataDase()
+    var mHistoryViewControllerProtocolObj : HistoryViewControllerProtocol!
+    var mLocalDatabaseObj = LocalDataDase()  //create object of LocalDataDase
     
-    init () {
-        mHistoryList = mLocalDatabaseObj.mFetchValuesFromHistoryTable()
-    }
-    //method to update history view 
-    func updateHistoryController(list : AnyObject) {
+    init (histroyObj : HistoryViewControllerProtocol) {
+        mHistoryViewControllerProtocolObj = histroyObj
+        //mHistoryList = mLocalDatabaseObj.mFetchValuesFromHistoryTable()
         
+        updateHistoryController()
     }
     
     //method to save videos in history
     func mSaveVideoDetailsInDB (videoDetails : [String : AnyObject]) {
         mLocalDatabaseObj.mInsertValueInToHistoryTable(videoDetails)
+    }
+    
+    //method to update history view
+    func updateHistoryController() {
+        mHistoryList = mLocalDatabaseObj.mFetchValuesFromHistoryTable()
+        mHistoryListCount = mHistoryList.count
+        mHistoryViewControllerProtocolObj.updateHistoyViewController()
     }
 }

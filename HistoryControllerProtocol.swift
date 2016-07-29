@@ -9,5 +9,5 @@
 
 protocol HistoryControllerProtocol {
 
-    func updateHistoryController(list : AnyObject)
+    func updateHistoryController()
 }

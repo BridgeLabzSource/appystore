@@ -19,7 +19,7 @@ class HistoryViewController: UIViewController,UICollectionViewDelegate,UICollect
     @IBOutlet weak var mCartLabel: UIButton!
     
     
-    
+    var mHistroyControllerObj : HistoryController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,7 @@ class HistoryViewController: UIViewController,UICollectionViewDelegate,UICollect
         collectionView.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundimage.jpg")!)
         collectionView.collectionViewLayout = CustomViewFlowLayout(width : CGRectGetWidth(self.view.frame))
         mChangeButtonImage()
+        mHistroyControllerObj = HistoryController(histroyObj: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,17 +38,21 @@ class HistoryViewController: UIViewController,UICollectionViewDelegate,UICollect
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return mHistroyControllerObj.mHistoryListCount
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SubCategoryCollectionViewCell", forIndexPath: indexPath) as! SubCategoryViewCell
-        cell.backgroundColor = UIColor.grayColor()
+        cell.videoNameLabel.text = mHistroyControllerObj.mHistoryList[indexPath.row]["title"] as? String
+        let duration = Int(self.mHistroyControllerObj.mHistoryList[indexPath.row]["content_duration"] as! String)
+        cell.videoDurationDisplayLabel.text = "\(duration!/60):\(duration!%60)"
+        
+
         return cell
     }
 
     func updateHistoyViewController(){
-        
+        collectionView.reloadData()
     }
     
     @IBAction func mGoToLogOutScreenButton(sender: UIButton) {
